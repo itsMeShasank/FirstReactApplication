@@ -1,13 +1,15 @@
+import { useState } from "react";
 
-interface FirstComponentProps {
-    count: number;
-    onClick: () => void;
+const [count, setCount] = useState(0);
+
+function handleClick() {
+    setCount(count+1);
 }
 
-function FirstComponent({ count, onClick }: FirstComponentProps) {
+function FirstComponent() {
     return (
       <>
-      <button className="button" onClick={onClick}>click</button>
+      <button className="button" onClick={handleClick}>click</button>
       <p>Button Clicked: {count}</p>
       </>
     )
