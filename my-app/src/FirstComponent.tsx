@@ -1,12 +1,11 @@
 import { useState } from "react";
 
-const [count, setCount] = useState(0);
-
-function handleClick() {
-    setCount(count+1);
-}
-
 function FirstComponent() {
+    const [count, setCount] = useState(0);
+
+    function handleClick() {
+        setCount(count+1);
+    }
     return (
       <>
       <button className="button" onClick={handleClick}>click</button>
